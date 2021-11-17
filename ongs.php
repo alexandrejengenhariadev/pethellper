@@ -47,11 +47,7 @@ include_once 'includes/header.php';
             <td><?php echo $dados['descricao']; ?></td>
             <td><?php echo $dados['imagem']; ?></td>
             <!--Botão editar-->
-            <td><a href="editar.php?id=<?php echo $dados['id']; ?>" class="btn btn-success">
-                <i class="bi bi-pencil-fill"></i></a></td>
-            <!--Botão delete-->
-            <td><a href="modal<?php echo $dados['id']; ?>" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal<?php echo $dados['id']; ?>">
-                <i class="bi bi-trash-fill"></i></a></td>
+           
 
 
           </tr>
@@ -87,9 +83,7 @@ include_once 'includes/header.php';
       ?>
     </tbody>
   </table>
-  <div class="col-md-12">
-    <a href="adicionar.php" class="btn btn-primary">Adicionar Cadastro</a>
-  </div>
+ 
   <?php
   //Footer
   include_once 'includes/footer.php';

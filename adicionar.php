@@ -12,25 +12,29 @@ require_once 'php_action/db_connect.php';
     <form class="row g-3" action="php_action/create.php" method="POST" enctype="multipart/form-data">
         <div class="col-md-6">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" name="nome" id="nome" required>
+            <input type="text" class="form-control" name="nome" id="nome" required maxlength="50">
         </div>
 
         <div class="col-md-6">
-            <label for="sobrenome" class="form-label">CNPJ</label>
-            <input type="text" class="form-control" name="cnpj" id="cnpj" required>
+            <label for="cnpj" class="form-label">CNPJ</label>
+            <input type="text" class="form-control" name="cnpj" id="cnpj" required maxlength="18">
         </div>
 
         <div class="col-md-6">
-            <label for="email" class="form-label">Responsável</label>
-            <input type="text" class="form-control" name="responsavel" id="responsavel" required>
+            <label for="responsavel" class="form-label">Responsável</label>
+            <input type="text" class="form-control" name="responsavel" id="responsavel" required maxlength="50">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="responsavel" id="responsavel" required maxlength="50">
         </div>
 
         <div class="col-md-6">
-            <label for="telefone" class="form-label">Endereco</label>
-            <input type="text" class="form-control" name="endereco" id="endereco" >
+            <label for="endereco" class="form-label">Endereco</label>
+            <input type="text" class="form-control" name="endereco" id="endereco" required>
         </div>
         <div class="col-md-4">
-            <label for="telefone" class="form-label">Estado</label>
+            <label for="estado" class="form-label">Estado</label>
             <input type="text" class="form-control" name="estado" id="estado">
         </div>
 

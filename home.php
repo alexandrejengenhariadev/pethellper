@@ -110,11 +110,12 @@ $resultado = mysqli_query($connect, $sql);
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <a href="#" class="btn btn-dark">Saiba Mais</a>
-                    </div>
+                   
 
                 </div>
+                <div class="col-12" id="info-contato">
+                       
+                       </div>
 
             </div>
         </div>

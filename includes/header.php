@@ -49,10 +49,10 @@
                         <a class="nav-link primary-color" href="ongs.php">Ongs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#info-container">Empresa</a>
+                        <a class="nav-link primary-color" href="home.php#info-container">Empresa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#contact-container">Contato</a>
+                        <a class="nav-link primary-color" href="home.php#info-contato">Contato</a>
                     </li>
 
                 </ul>

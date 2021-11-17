@@ -18,6 +18,7 @@ if (isset($_POST['btn-cadastrar'])) :
     $nome = mysqli_escape_string($connect, $_POST['nome']);
     $cnpj = mysqli_escape_string($connect, $_POST['cnpj']);
     $responsavel = mysqli_escape_string($connect, $_POST['responsavel']);
+    $email = mysqli_escape_string($connect, $_POST['email']);
     $endereco = mysqli_escape_string($connect, $_POST['endereco']);
     $estado = mysqli_escape_string($connect, $_POST['estado']);
     $descricao = mysqli_escape_string($connect, $_POST['descricao']);
@@ -26,8 +27,8 @@ if (isset($_POST['btn-cadastrar'])) :
         $temporario = $_FILES['imagem']['tmp_name'];
         $novoNome = uniqid() . ".$extensao";
         if (move_uploaded_file($temporario, $pasta . $novoNome)) :
-            $sql = "INSERT INTO `ongs` (`id`, `nome`, `cnpj`, `responsavel`, `endereco`,`estado`, `descricao`, `imagem`) 
-            VALUES (NULL, '$nome', '$cnpj', '$responsavel', '$endereco','$estado', '$descricao', '$novoNome')";
+            $sql = "INSERT INTO `ongs` (`id`, `nome`, `cnpj`, `responsavel`, `email`, `endereco`,`estado`, `descricao`, `imagem`) 
+            VALUES (NULL, '$nome', '$cnpj', '$responsavel','$email', '$endereco','$estado', '$descricao', '$novoNome')";
             mysqli_set_charset($connect, 'utf8');
 
             if (mysqli_query($connect, $sql)) :

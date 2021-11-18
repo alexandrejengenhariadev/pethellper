@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 include_once 'includes/mensagem.php';
 //adicionando a conexão com o banco de dados
@@ -7,20 +8,25 @@ include_once 'php_action/db_connect.php';
 include_once 'includes/header.php';
 //Botão enviar
 if (isset($_POST['btn-entrar'])):
-    $erros=array();
+    $erros = array();
     $login = mysqli_escape_string($connect,$_POST['login']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
     if (empty($login) or empty($senha)):
         $erros[]="<li> O campo login/senha precisa ser preenchido </li>";
     else:
-        $sql= "SELECT login FROM usuarios WHERE 'login' = '$login' and 'senha' = '$senha'";
+        $sql= "SELECT * FROM usuarios WHERE login = '$login' ";
         $resultado = mysqli_query($connect,$sql);
         if(mysqli_num_rows($resultado)>0):
-            if(mysqli_num_rows($resultado)==1):
+          $senha=md5($senha);
+          $sql= "SELECT * FROM usuarios WHERE login = '$login' and senha ='$senha' ";
+          $resultado = mysqli_query($connect,$sql);
+               if(mysqli_num_rows($resultado)==1):
                 $dados= mysqli_fetch_array($resultado);
                 $_SESSION['logado' ] = true;
                 $_SESSION['id_usuario'] = $dados['id'];
-                //header('Location:administracao.php');
+               //header('Location:/administracao.php');
+               echo'<script>window.location="administracao.php"</script>';
+               exit();
             else:
                 $erros[]="<li>Usuário ou senha invalidos</li>";
             endif;

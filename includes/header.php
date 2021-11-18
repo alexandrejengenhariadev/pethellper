@@ -57,7 +57,7 @@
 
                 </ul>
                 
-                        <a class="nav-link primary-color" href="administracao.php">Administração</a>
+                        <a class="nav-link primary-color" href="login.php">Administração</a>
                    
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">

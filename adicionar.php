@@ -26,7 +26,7 @@ require_once 'php_action/db_connect.php';
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="responsavel" id="responsavel" required maxlength="50">
+            <input type="email" class="form-control" name="email" id="email" required maxlength="50">
         </div>
 
         <div class="col-md-6">
@@ -57,7 +57,3 @@ require_once 'php_action/db_connect.php';
             </form>
            
         </div>
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>

@@ -15,13 +15,8 @@ include_once 'includes/header.php';
     <thead>
       <tr>
         <th scope="col">Nome</th>
-        <th scope="col">CNPJ</th>
-        <th scope="col">Responsável</th>
-        <th scope="col">Email</th>
-        <th scope="col">Endereço</th>
-        <th scope="col">Estado</th>
-        <th scope="col">Descrição</th>
-        <th scope="col">Imagem</th>
+        <th scope="col">Login</th>
+        
 
 
       </tr>
@@ -29,7 +24,7 @@ include_once 'includes/header.php';
     <tbody>
       <!--Exibindo dados do banco de dados-->
       <?php
-      $sql = "SELECT * FROM ongs";
+      $sql = "SELECT * FROM usuarios";
       $resultado = mysqli_query($connect, $sql);
       //Verificando se a lista contem valores antes de começar o looping
       if (mysqli_num_rows($resultado) > 0) :
@@ -39,15 +34,10 @@ include_once 'includes/header.php';
       ?>
           <tr>
             <td><?php echo $dados['nome']; ?></td>
-            <td><?php echo $dados['cnpj']; ?></td>
-            <td><?php echo $dados['responsavel']; ?></td>
-            <td><?php echo $dados['email']; ?></td>
-            <td><?php echo $dados['endereco']; ?></td>
-            <td><?php echo $dados['estado']; ?></td>
-            <td><?php echo $dados['descricao']; ?></td>
-            <td><?php echo $dados['imagem']; ?></td>
+            <td><?php echo $dados['login']; ?></td>
+           
             <!--Botão editar-->
-            <td><a href="editar.php?id=<?php echo $dados['id']; ?>" class="btn btn-success">
+            <td><a href="editarUsuario.php?id=<?php echo $dados['id']; ?>" class="btn btn-success">
                 <i class="bi bi-pencil-fill"></i></a></td>
             <!--Botão delete-->
             <td><a href="modal<?php echo $dados['id']; ?>" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal<?php echo $dados['id']; ?>">
@@ -71,7 +61,7 @@ include_once 'includes/header.php';
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-                  <form action="php_action/delete.php" method="POST">
+                  <form action="php_action/deleteUsuario.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
                     <button type="submit" name="btn-deletar" class="btn btn-danger">Sim quero deletar</button>
 
@@ -88,9 +78,6 @@ include_once 'includes/header.php';
     </tbody>
   </table>
   <div class="col-md-12">
-    <a href="adicionar.php" class="btn btn-primary">Adicionar Cadastro</a>
+    <a href="adicionarUsuario.php" class="btn btn-primary">Adicionar Cadastro</a>
   </div>
-  <?php
-  //Footer
-  include_once 'includes/footer.php';
-  ?>
+ 

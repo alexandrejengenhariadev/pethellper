@@ -53,7 +53,7 @@ endif;
         <div class="col-md-12">
             <button type="submit" class="btn btn-primary" name="btn-editar">Atualizar</button>
             <a href="index.php" class="btn btn-primary">Listar Cadastro</a>
-
+        </div>
 
     </form>
 </div>

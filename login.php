@@ -12,8 +12,7 @@ if (isset($_POST['btn-entrar'])):
     $login = mysqli_escape_string($connect,$_POST['login']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
     if (empty($login) or empty($senha)):
-      $_SESSION['mensagem'] = ' O campo login/senha precisa ser preenchido';
-      
+        $erros[]="<li> O campo login/senha precisa ser preenchido </li>";
     else:
         $sql= "SELECT * FROM usuarios WHERE login = '$login' ";
         $resultado = mysqli_query($connect,$sql);
@@ -29,14 +28,11 @@ if (isset($_POST['btn-entrar'])):
                echo'<script>window.location="administracao.php"</script>';
                exit();
             else:
-                
-                $_SESSION['mensagem'] = 'Usuário ou senha invalidos';
+                $erros[]="<li>Usuário ou senha invalidos</li>";
             endif;
            
         else:
-           
-            $_SESSION['mensagem'] = 'Usuario inexistente';
-            
+            $erros[]="<li>Usuario inexistente</li>";
         endif;
     endif;
 

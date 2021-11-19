@@ -28,13 +28,12 @@ $resultado = mysqli_query($connect, $sql);
             ?>
         <!--BANNER 1-->
         <div class="carousel-item active">
-            <?php if(!$banner[0]):
-                $exibe = 'sem_imagem.jpg';
-            else:
-                $exibe= $banner[0];
-            endif;
+            <?php if(!isset($banner[0])):
+               $banner[0]='sem_imagem.jpg';
+           
+                 endif;
                  ?>
-            <img src="img/banner/<?php echo $exibe;?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="img/banner/<?php echo $banner[0];?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777">
 
                 <div class="container">
@@ -45,13 +44,12 @@ $resultado = mysqli_query($connect, $sql);
         </div>
         <!--BANNER 2-->
         <div class="carousel-item">
-        <?php if(!$banner[1]):
-                $exibe = 'sem_imagem.jpg';
-            else:
-                $exibe= $banner[1];
+        <?php if(!isset($banner[1])):
+               $banner[1]= 'sem_imagem.jpg';
+           
             endif;
                  ?>
-            <img src="img/banner/<?php echo $exibe; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="img/banner/<?php echo $banner[1]; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777">
 
                 <div class="container">
@@ -62,13 +60,12 @@ $resultado = mysqli_query($connect, $sql);
         </div>
          <!--BANNER 3-->
          <div class="carousel-item">
-         <?php if(!$banner[2]):
-                $exibe = 'sem_imagem.jpg';
-            else:
-                $exibe= $banner[2];
+         <?php if(!isset($banner[2])):
+               $banner[2]= 'sem_imagem.jpg';
+           
             endif;
                  ?>
-            <img src="img/banner/<?php echo $exibe; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="img/banner/<?php echo $banner[2]; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777">
 
                 <div class="container">
@@ -79,13 +76,12 @@ $resultado = mysqli_query($connect, $sql);
         </div>
          <!--BANNER 4-->
          <div class="carousel-item">
-         <?php if(!$banner[3]):
-                $exibe = 'sem_imagem.jpg';
-            else:
-                $exibe= $banner[3];
+         <?php if(!isset($banner[3])):
+               $banner[3]= 'sem_imagem.jpg';
+           
             endif;
                  ?>
-            <img src="img/banner/<?php echo $exibe; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img src="img/banner/<?php echo $banner[3]; ?>" alt="banner de boas vindas" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777">
 
                 <div class="container">

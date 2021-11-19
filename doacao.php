@@ -55,7 +55,7 @@ $resultado = mysqli_query($connect, $sql);
             <input type="hidden" name="id" value="<?php echo $id[0]; ?>">
            
             <input type="hidden" name="valor" value="<?php echo $valor[0]; ?>">
-            <input type="hidden" name="descricao" value="<?php echo $descricao[0]; ?>">
+            
         
             <button type="submit" name="btn-doar1" class="btn btn-primary">DOAR</button>
 

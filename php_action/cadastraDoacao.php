@@ -15,12 +15,13 @@ if (isset($_POST['btn-doar1'])) :
    
 
     $nome = mysqli_escape_string($connect, $_POST['nome']);
-    $valor = mysqli_escape_string($connect, $_POST['valor']);
+    
     $combo = mysqli_escape_string($connect, $_POST['id']);
-    $descricao =  mysqli_escape_string($connect, $_POST['descricao']);
+    $valor = mysqli_escape_string($connect, $_POST['valor']);
+   
    
     $sql = "INSERT INTO `doacao` (`id`, `ong`, `combo`, `valor`) 
-    VALUES (NULL,'$nome', '$descricao','$combo', '$valor' )";
+    VALUES (NULL,'$nome','$combo', '$valor' )";
     mysqli_set_charset($connect, 'utf8');
 
     if (mysqli_query($connect, $sql)) :

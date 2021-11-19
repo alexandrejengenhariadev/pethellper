@@ -2,14 +2,16 @@
 require_once '../public_html/php_action/db_connect.php';
 
 
-$sql = "SELECT * FROM banner";
+$sql = "SELECT * FROM combo";
 $resultado = mysqli_query($connect, $sql);
 
             //Verificando se a lista contem valores antes de começar o looping
             if (mysqli_num_rows($resultado) > 0) :
 
                 while ($dados = mysqli_fetch_array($resultado)) :
-                    $banner [] = $dados['nome'];
+                    $id [] = $dados['id'];
+                    $banner [] = $dados['descricao'];
+                    $valor [] = $dados ['valor'];
                 endwhile;
             endif;
 
@@ -24,7 +26,8 @@ $resultado = mysqli_query($connect, $sql);
 </head>
 <body>
     <?php
-    echo $banner[0];
+    echo $banner[0], $valor[0], $id[0];
+    
      ?>
      <br>
       <?php

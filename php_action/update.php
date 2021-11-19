@@ -7,15 +7,18 @@ if (isset($_POST['btn-editar'])):
     $nome = mysqli_escape_string($connect,$_POST['nome']);
     $cnpj = mysqli_escape_string($connect,$_POST['cnpj']);
     $responsavel = mysqli_escape_string($connect,$_POST['responsavel']);
+    $email = mysqli_escape_string($connect,$_POST['email']);
     $endereco = mysqli_escape_string($connect,$_POST['endereco']);
     $estado = mysqli_escape_string($connect,$_POST['estado']);
     $descricao = mysqli_escape_string($connect,$_POST['descricao']);
     $id = mysqli_escape_string($connect,$_POST['id']);
 
 
-    $sql = "UPDATE `ongs` SET nome = '$nome', 
+    $sql = "UPDATE `ongs` SET 
+    nome = '$nome', 
     cnpj = '$cnpj', 
-    responsavel = '$responsavel', 
+    responsavel = '$responsavel',
+    email = '$email', 
     endereco = '$endereco',
     estado = '$estado', 
     descricao='$descricao' 

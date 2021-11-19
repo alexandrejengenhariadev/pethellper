@@ -205,3 +205,28 @@
         }
 
 }
+
+/*ESTILO DOS ICONES E FONTE DA PAGINA ADMINISTRACAO*/
+.opcoes i{
+    font-size: 60px;
+   
+}
+.opcoes{
+    font-size: 24px;
+}
+.opcoes a{
+    color: #050505;
+    text-decoration: none;
+}
+.opcoes a:hover{
+    color: rgb(128, 120, 120);
+
+}
+.opcoes:hover{
+
+    border: 5px inset lightslategray;
+}
+.opcoes{
+
+    border: 5px inset transparent;
+}

@@ -26,15 +26,20 @@ endif;
             <input type="text" class="form-control" name="cnpj" id="cnpj" value="<?php echo $dados['cnpj']; ?>" required>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <label for="email" class="form-label">Responsável</label>
             <input type="text" class="form-control" name="responsavel" id="responsavel" value="<?php echo $dados['responsavel']; ?>" required>
+        </div>
+        <div class="col-md-6">
+            <label for="telefone" class="form-label">Email</label>
+            <input type="text" class="form-control" name="endereco" id="email" value="<?php echo $dados['email']; ?>" >
         </div>
 
         <div class="col-md-4">
             <label for="telefone" class="form-label">Endereço</label>
             <input type="text" class="form-control" name="endereco" id="endereco" value="<?php echo $dados['endereco']; ?>" >
         </div>
+       
         <div class="col-md-4">
             <label for="telefone" class="form-label">Estado</label>
             <input type="text" class="form-control" name="estado" id="estado" value="<?php echo $dados['estado']; ?>" >
@@ -52,7 +57,3 @@ endif;
 
     </form>
 </div>
-<?php
-//Footer
-include_once 'includes/footer.php';
-?>

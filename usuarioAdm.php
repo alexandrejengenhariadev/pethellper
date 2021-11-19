@@ -90,4 +90,7 @@ include_once 'includes/header.php';
   <div class="col-md-12">
     <a href="adicionar.php" class="btn btn-primary">Adicionar Cadastro</a>
   </div>
- 
+  <?php
+  //Footer
+  include_once 'includes/footer.php';
+  ?>

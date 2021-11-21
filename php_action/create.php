@@ -12,9 +12,10 @@ require_once 'db_connect.php';
 
 
 if (isset($_POST['btn-cadastrar'])) :
-    $formatosPermitidos = array("png", "jpeg", "jpg");
     $extensao = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
-
+   
+    $formatosPermitidos = array("png", "jpeg", "jpg");
+   
     $nome = mysqli_escape_string($connect, $_POST['nome']);
     $cnpj = mysqli_escape_string($connect, $_POST['cnpj']);
     $responsavel = mysqli_escape_string($connect, $_POST['responsavel']);
@@ -25,6 +26,7 @@ if (isset($_POST['btn-cadastrar'])) :
     if (in_array($extensao, $formatosPermitidos)) :
         $pasta = "../img/";
         $temporario = $_FILES['imagem']['tmp_name'];
+       
         $novoNome = uniqid() . ".$extensao";
         if (move_uploaded_file($temporario, $pasta . $novoNome)) :
             $sql = "INSERT INTO `ongs` (`id`, `nome`, `cnpj`, `responsavel`, `email`, `endereco`,`estado`, `descricao`, `imagem`) 
@@ -50,7 +52,7 @@ if (isset($_POST['btn-cadastrar'])) :
 
 
 endif;
-include_once 'includes/header.php';
+include_once '../includes/header.php';
 
 
 ?>
@@ -64,5 +66,5 @@ include_once 'includes/header.php';
 </div>
 <?php
 //Footer
-include_once 'includes/footer.php';
+include_once '../includes/footer.php';
 ?>

@@ -42,7 +42,7 @@ require_once 'php_action/db_connect.php';
             <label for="descricao" class="form-label">Descrição</label>
             <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
         </div>
-        <input type="file" name="imagem" id="imagem" >
+        <input type="file" name="imagem" id="imagem" required>
           
         <?php
 

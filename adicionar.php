@@ -16,7 +16,7 @@ require_once 'php_action/db_connect.php';
         </div>
 
         <div class="col-md-6">
-            <label for="cnpj" class="form-label">CNPJ</label>
+            <label for="cnpj" class="form-label">OSCIP</label>
             <input type="text" class="form-control" name="cnpj" id="cnpj" required maxlength="18">
         </div>
 

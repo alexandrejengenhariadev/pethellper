@@ -25,10 +25,10 @@ if (isset($_POST['btn-doar1'])) :
     mysqli_set_charset($connect, 'utf8');
 
     if (mysqli_query($connect, $sql)) :
-        $_SESSION['mensagem'] = 'cadastro feito com sucesso!';
+        $_SESSION['mensagem'] = 'Doação concluida com sucesso!';
         header('Location: ../comboAdm.php');
             else :
-        $_SESSION['mensagem'] = 'Erro ao cadastrar !';
+        $_SESSION['mensagem'] = 'Erro !';
         header('Location: ../comboAdm.php');
     endif;
   

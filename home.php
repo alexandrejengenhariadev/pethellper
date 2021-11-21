@@ -65,7 +65,7 @@ $resultado = mysqli_query($connect, $sql);
 
     </div>
 </div>
-<!--INFO-->
+<!--INFORMAÇÕES -->
 <div class="container" id="info-container">
     <div class="col-12">
         <h2 class="title primary-color">Detalhes Importantes</h2>
@@ -83,29 +83,29 @@ $resultado = mysqli_query($connect, $sql);
                     <div class="col-12">
                         <h2 class="title primary-color">Estes dados fazem a diferença</h2>
                         <p class="subtitle secondary-color">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum consectetur eos laborum
-                            possimus suscipit commodi impedit animi ipsa molestiae quisquam, neque aperiam sequi
-                            nobis reiciendis quos aspernatur, quasi eaque pariatur.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum consectetur eos laborum
-                            possimus suscipit commodi impedit animi ipsa molestiae quisquam, neque aperiam sequi
-                            nobis reiciendis quos aspernatur, quasi eaque pariatur.
+                        O projeto surgiu como uma solução para as dificuldades encontradas pelas Ongs na arrecadação 
+                        de suprimentos e captação de recursos para a manutenção da Organização, situação que se agravou
+                        com a pandemia. Atualmente o projeto consta com mais de 10 organizações cadastradas e pretende 
+                        elevar esse numero a um patamar muito mais elevado, podendo assim contribuir com ajuda para causa 
+                        animal.      
+                      
 
                         </p>
                     </div>
                     <div class="col-12" id="info-numbers">
                         <div class="row">
                             <div class="col-4">
-                                <h3 class="primary-color">180</h3>
+                                <h3 class="primary-color">1</h3>
                                 <p class="secondary-color">Doações</p>
                             </div>
 
                             <div class="col-4">
-                                <h3 class="primary-color">07</h3>
+                                <h3 class="primary-color">0</h3>
                                 <p class="secondary-color">Adoções</p>
                             </div>
 
                             <div class="col-4">
-                                <h3 class="primary-color">1800</h3>
+                                <h3 class="primary-color">50.00</h3>
                                 <p class="secondary-color">Valores arrecadados</p>
                             </div>
                         </div>

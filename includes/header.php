@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Hellper</title>
+    <title>Pet Helper</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!--Google Fonts - Lato-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
 <nav class="navbar navbar-expand-lg fixed-top bg-dark-color" id="navbar">
         <div class="container py-3">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt="pethellper">
-                <span class="primary-color">Pet Hellper </span>
+                <span class="primary-color">Pet Helper </span>
             </a>
             <!-- Esse botão são aquelas 3 barrinhas indicando um menu-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items"

@@ -41,7 +41,7 @@ include_once 'includes/header.php';
         </a>
       </div>
       <div class="col-md-3 opcoes">
-        <a href="bannerAdm.php">
+        <a href="listarBanner.php">
         <i class="bi bi-bookmarks"></i>
           <p>Cadastrar Banner</p>
         </a>

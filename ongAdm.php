@@ -15,7 +15,7 @@ include_once 'includes/header.php';
     <thead>
       <tr>
         <th scope="col">Nome</th>
-        <th scope="col">CNPJ</th>
+        <th scope="col">OSCIP</th>
         <th scope="col">Responsável</th>
         <th scope="col">Email</th>
         <th scope="col">Endereço</th>

@@ -1,6 +1,8 @@
 <?php
+
 include_once 'includes/header.php';
 include_once 'php_action/db_connect.php';
+include_once 'includes/mensagem.php';
 ?>
 
 <br>

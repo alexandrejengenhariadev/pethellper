@@ -4,6 +4,7 @@
 
 session_start();
 require_once 'db_connect.php';
+include_once '../includes/mensagem.php';
 ?>
 <br>
 <br>
@@ -11,11 +12,10 @@ require_once 'db_connect.php';
 <?php
 
 
-if (isset($_POST['btn-doar1'])) :
+if (isset($_POST['btn-doar'])) :
    
 
-    $nome = mysqli_escape_string($connect, $_POST['nome']);
-    
+    $nome = mysqli_escape_string($connect, $_POST['nome']);    
     $combo = mysqli_escape_string($connect, $_POST['id']);
     $valor = mysqli_escape_string($connect, $_POST['valor']);
    
@@ -26,14 +26,15 @@ if (isset($_POST['btn-doar1'])) :
 
     if (mysqli_query($connect, $sql)) :
         $_SESSION['mensagem'] = 'Doação concluida com sucesso!';
-        header('Location: ../comboAdm.php');
+        header('Location: ../home.php');
             else :
         $_SESSION['mensagem'] = 'Erro !';
-        header('Location: ../comboAdm.php');
+        header('Location: ../home.php');
     endif;
   
 
 endif;
+
 include_once 'includes/header.php';
 
 

@@ -92,10 +92,19 @@ $resultado = mysqli_query($connect, $sql);
 
                         </p>
                     </div>
+                    <?php
+    $sql2 = "SELECT SUM(valor) as 'somaRes' FROM doacao"; 
+    $res = mysqli_query($connect, $sql2);
+    $data = mysqli_fetch_array($res);
+    $sql3  = "SELECT COUNT(*) as 'somaRes2' FROM doacao";
+    $res2 = mysqli_query($connect, $sql3);
+    $data2 = mysqli_fetch_array($res2);
+    ?>
+  
                     <div class="col-12" id="info-numbers">
                         <div class="row">
                             <div class="col-4">
-                                <h3 class="primary-color">1</h3>
+                                <h3 class="primary-color"><?php echo $data2['somaRes2'];?></h3>
                                 <p class="secondary-color">Doações</p>
                             </div>
 
@@ -105,7 +114,7 @@ $resultado = mysqli_query($connect, $sql);
                             </div>
 
                             <div class="col-4">
-                                <h3 class="primary-color">50.00</h3>
+                                <h3 class="primary-color"><?php echo $data['somaRes'];?></h3>
                                 <p class="secondary-color">Valores arrecadados</p>
                             </div>
                         </div>

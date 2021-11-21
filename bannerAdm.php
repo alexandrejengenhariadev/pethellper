@@ -53,10 +53,10 @@ include_once 'includes/header.php';
     
 
     <form action="php_action/upBanner.php" method="POST" enctype="multipart/form-data">
-    <label for="formFile" class="form-label">Tamanho 1140x250</label>
-      <input type="file" name="imagem" class="form-control">
+    <label for="formFile" class="form-label "><h2 class="text-center">Para uma melhor performance recomenda-se o Tamanho 1140x250</h2></label>
+      <input type="file" name="imagem" class="form-control" required>
       <br>
-      <label for="formFile" class="form-label">Descrição</label>
+      <label for="formFile" class="form-label"  >Descrição</label>
       <input type="text" name="descricao" class="form-control">
       <br>
       <button class=" btn btn-lg btn-primary" type="submit" name="enviar">Enviar</button>

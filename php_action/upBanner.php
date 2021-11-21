@@ -28,10 +28,10 @@ if (isset($_POST['enviar'])) :
             mysqli_set_charset($connect, 'utf8');
 
             if (mysqli_query($connect, $sql)) :
-                $_SESSION['mensagem'] = 'cadastro feito com sucesso!';
+                $_SESSION['mensagem'] = 'Banner carregado com sucesso!';
                 header('Location: ../listarBanner.php');
             else :
-                $_SESSION['mensagem'] = 'Erro ao cadastrar !';
+                $_SESSION['mensagem'] = 'Erro ao carregar Banner !';
                 header('Location: ../listarBanner.php');
             endif;
             $mensagem = "Upload feito com sucesso";

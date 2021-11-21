@@ -230,3 +230,9 @@
 
     border: 5px inset transparent;
 }
+
+.enviar a{
+    
+    text-decoration: none;
+    color: #fcfafa;
+}

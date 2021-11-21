@@ -27,13 +27,13 @@
                                 <div class="mb-3">
                                     <input type="email" class="form-control" placeholder="Digite o seu e-mail">
                                 </div>
-                                <button class="btn btn-dark" type="submit">Inscrever</button>
+                                <button class="btn btn-dark enviar" type="submit"><a href="mailto:pethelper@gmail.com">Inscrever</a></button>
                             </form>
                         </div>
                         <div class="col-12 col-md-6" id="contact-container">
                             <h4>Formas de contato</h4>
                             <p class="secondary-color">(99)99999-9999</p>
-                            <p class="secondary-color">contato@gmail.com</p>
+                            <p class="secondary-color">pethelper@gmail.com</p>
                         </div>
                         
                     </div>

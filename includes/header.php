@@ -46,7 +46,7 @@
                         <a class="nav-link active primary-color" aria-current="page" href="home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="ongs.php">Ongs</a>
+                        <a class="nav-link primary-color" href="necessidadeOng.php">Ongs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link primary-color" href="home.php#info-container">Empresa</a>
@@ -57,11 +57,9 @@
 
                 </ul>
                 
-                        <a class="nav-link primary-color" href="login.php">Administração</a>
+                <form class="d-flex cadastro">
                    
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-danger" type="submit"> <a href="cadastraOng.php">CADASTRE-SE AQUI!</a> </button>
                 </form>
             </div>
         </div>

@@ -31,12 +31,13 @@ $resultado = mysqli_query($connect, $sql);
 
         <div class="row g-4">
             <?php
-            //Verificando se a lista contem valores antes de começar o looping
+            
+            //VERIFICANDO SE A LISTA CONTEM VALORES ANTES DE COMEÇAR O LOOPING 
             if (mysqli_num_rows($resultado) > 0) :
 
                 while ($dados = mysqli_fetch_array($resultado)) :
             ?>
-                    <!--IMAGEM DESTAQUE 1-->
+                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
                     <div class="col-12 col-md-4">
                         <img src="img/<?php echo $dados['imagem']; ?>" class="img-fluid">
                         <div class="banner-content">

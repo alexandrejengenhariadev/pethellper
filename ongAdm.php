@@ -6,6 +6,10 @@ include_once 'php_action/db_connect.php';
 include_once 'includes/header.php';
 ?>
 
+<br>
+<br>
+<br>
+<br>
 
 <div class="container mt-5">
   <h1>Novo Cadastro</h1>
@@ -89,5 +93,6 @@ include_once 'includes/header.php';
   </table>
   <div class="col-md-12">
     <a href="adicionar.php" class="btn btn-primary">Adicionar Cadastro</a>
+    <a href="suprimentosAdm.php" class="btn btn-danger">Suprimentos</a>
   </div>
  

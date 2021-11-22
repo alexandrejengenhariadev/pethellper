@@ -56,11 +56,12 @@
                     </li>
 
                 </ul>
-                
+              
                 <form class="d-flex cadastro">
                    
                     <button class="btn btn-danger" type="submit"> <a href="cadastraOng.php">CADASTRE-SE AQUI!</a> </button>
                 </form>
+                <a class="nav-link primary-color" href="login.php"><i class="bi bi-person-circle"></i></a>
             </div>
         </div>
     </nav>

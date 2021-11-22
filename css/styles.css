@@ -238,10 +238,20 @@
 }
 .suprimentos li{
     font-size: 24px;
+    text-decoration: none;
 
 }
 .cadastro a{
     text-decoration: none;
     color: #fcfafa;
 
+}
+#suprimentos li{
+   
+    text-decoration: none;
+
+}
+
+#navbar-items i{
+    font-size: 32px;
 }

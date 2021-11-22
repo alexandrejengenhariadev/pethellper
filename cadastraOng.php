@@ -7,6 +7,8 @@ require_once 'php_action/db_connect.php';
 ?>
 <br>
 <br>
+<br>
+<br>
 <div class="container mt-5">
     <h1>Novo Cadastro</h1>
     <form class="row g-3" action="php_action/createOng.php" method="POST" enctype="multipart/form-data">
@@ -17,7 +19,7 @@ require_once 'php_action/db_connect.php';
 
         <div class="col-md-6">
             <label for="site" class="form-label">Site</label>
-            <input type="text" class="form-control" name="site" id="site" required maxlength="18">
+            <input type="text" class="form-control" name="site" id="site" required maxlength="50">
         </div>
 
         <div class="col-md-6">

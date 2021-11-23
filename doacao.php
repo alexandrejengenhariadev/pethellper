@@ -56,6 +56,7 @@ $resultado = mysqli_query($connect, $sql);
             
         
             <button type="submit" name="btn-doar" class="btn btn-primary">DOAR</button>
+            <a href="home.php" class="btn btn-danger">Voltar</a>
 
           </form>
         </div>
@@ -81,6 +82,7 @@ $resultado = mysqli_query($connect, $sql);
             
         
             <button type="submit" name="btn-doar" class="btn btn-primary">DOAR</button>
+            <a href="home.php" class="btn btn-danger">Voltar</a>
 
           </form>
         </div>
@@ -106,6 +108,7 @@ $resultado = mysqli_query($connect, $sql);
             
         
             <button type="submit" name="btn-doar" class="btn btn-primary">DOAR</button>
+            <a href="home.php" class="btn btn-danger">Voltar</a>
 
           </form>
         </div>

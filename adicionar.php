@@ -7,6 +7,9 @@ require_once 'php_action/db_connect.php';
 ?>
 <br>
 <br>
+<br>
+<br>
+
 <div class="container mt-5">
     <h1>Novo Cadastro</h1>
     <form class="row g-3" action="php_action/create.php" method="POST" enctype="multipart/form-data">

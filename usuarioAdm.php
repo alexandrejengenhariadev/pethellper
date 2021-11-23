@@ -5,7 +5,10 @@ include_once 'php_action/db_connect.php';
 //Incluindo o cabeçalho
 include_once 'includes/header.php';
 ?>
-
+<br>
+<br>
+<br>
+<br>
 
 <div class="container mt-5">
   <h1>Novo Cadastro</h1>
@@ -24,7 +27,7 @@ include_once 'includes/header.php';
     <tbody>
       <!--Exibindo dados do banco de dados-->
       <?php
-      $sql = "SELECT * FROM usuarios";
+      $sql = "SELECT * FROM usuarios WHERE login != 'admin'";
       $resultado = mysqli_query($connect, $sql);
       //Verificando se a lista contem valores antes de começar o looping
       if (mysqli_num_rows($resultado) > 0) :

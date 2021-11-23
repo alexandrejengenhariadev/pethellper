@@ -104,23 +104,29 @@ $resultado = mysqli_query($connect, $sql);
     $sql3  = "SELECT COUNT(*) as 'somaRes2' FROM doacao";
     $res2 = mysqli_query($connect, $sql3);
     $data2 = mysqli_fetch_array($res2);
+    $sql4  = "SELECT COUNT(*) as 'somaRes3' FROM ongs";
+    $res3 = mysqli_query($connect, $sql4);
+    $data3 = mysqli_fetch_array($res3);
     ?>
   
                     <div class="col-12" id="info-numbers">
                         <div class="row">
                             <div class="col-4">
-                                <h3 class="primary-color"><?php echo $data2['somaRes2'];?></h3>
-                                <p class="secondary-color">Doações</p>
+                                <h2 class="text-center">DOAÇÕES</h2>
+                                <h3 class="primary-color text-center"><?php echo $data2['somaRes2'];?></h3>
+                                <p class="secondary-color text-center">Doações</p>
                             </div>
 
                             <div class="col-4">
-                                <h3 class="primary-color">0</h3>
-                                <p class="secondary-color">Adoções</p>
+                            <h2 class="text-center">ONGS</h2>
+                                <h3 class="primary-color text-center"><?php echo $data3['somaRes3'];?></h3>
+                                <p class="secondary-color text-center">ONGS Cadastradas</p>
                             </div>
 
                             <div class="col-4">
-                                <h3 class="primary-color"><?php echo $data['somaRes'];?></h3>
-                                <p class="secondary-color">Valores arrecadados</p>
+                            <h2 class="text-center">VALORES</h2>
+                                <h3 class="primary-color text-center"><?php echo $data['somaRes'];?></h3>
+                                <p class="secondary-color text-center">Valores arrecadados</p>
                             </div>
                         </div>
                     </div>

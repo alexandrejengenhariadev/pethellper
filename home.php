@@ -52,6 +52,7 @@ $resultado = mysqli_query($connect, $sql);
                             </form>
                             
                         </div>
+                        <h3 class="text-center"><?php echo $dados['nome']; ?></h3>
                     </div>
 
 

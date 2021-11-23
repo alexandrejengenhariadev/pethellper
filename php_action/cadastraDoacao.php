@@ -18,10 +18,11 @@ if (isset($_POST['btn-doar'])) :
     $nome = mysqli_escape_string($connect, $_POST['nome']);    
     $combo = mysqli_escape_string($connect, $_POST['id']);
     $valor = mysqli_escape_string($connect, $_POST['valor']);
+    $codigoDoacao = uniqid();
    
    
-    $sql = "INSERT INTO `doacao` (`id`, `ong`, `combo`, `valor`) 
-    VALUES (NULL,'$nome','$combo', '$valor' )";
+    $sql = "INSERT INTO `doacao` (`id`, `ong`, `combo`, `valor`, `codigodoacao`) 
+    VALUES (NULL,'$nome','$combo', '$valor','$codigoDoacao' )";
     mysqli_set_charset($connect, 'utf8');
 
     if (mysqli_query($connect, $sql)) :

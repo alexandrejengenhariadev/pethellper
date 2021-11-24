@@ -1,15 +1,10 @@
 
 <?php
-
-
 include_once 'includes/mensagem.php';
 //adicionando a conexão com o banco de dados
 include_once 'php_action/db_connect.php';
 //Incluindo o cabeçalho//
 include_once 'includes/header.php';
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

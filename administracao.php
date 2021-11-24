@@ -1,12 +1,16 @@
+
 <?php
+
+
 include_once 'includes/mensagem.php';
 //adicionando a conexão com o banco de dados
 include_once 'php_action/db_connect.php';
-//Incluindo o cabeçalho
+//Incluindo o cabeçalho//
 include_once 'includes/header.php';
+
+
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,19 +41,19 @@ include_once 'includes/header.php';
       </div>
       <div class="col-md-3 opcoes">
         <a href="usuarioAdm.php">
-        <i class="bi bi-person-plus-fill"></i>
+          <i class="bi bi-person-plus-fill"></i>
           <p>Cadastrar Usuario</p>
         </a>
       </div>
       <div class="col-md-3 opcoes">
         <a href="listarBanner.php">
-        <i class="bi bi-bookmarks"></i>
+          <i class="bi bi-bookmarks"></i>
           <p>Cadastrar Banner</p>
         </a>
       </div>
       <div class="col-md-3 opcoes">
         <a href="comboAdm.php">
-        <i class="bi bi-upc-scan"></i>
+          <i class="bi bi-upc-scan"></i>
           <p>Cadastrar Combo</p>
         </a>
       </div>

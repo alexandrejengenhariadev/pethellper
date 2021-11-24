@@ -14,11 +14,14 @@ require_once 'db_connect.php';
 if (isset($_POST['btn-cadastrar'])) :
    
 
-    $descricao = mysqli_escape_string($connect, $_POST['descricao']);
+    $produto1 = mysqli_escape_string($connect, $_POST['produto1']);
+    $produto2 = mysqli_escape_string($connect, $_POST['produto2']);
+    $produto3 = mysqli_escape_string($connect, $_POST['produto3']);
+    $produto4 = mysqli_escape_string($connect, $_POST['produto4']);
     $valor = mysqli_escape_string($connect, $_POST['valor']);
    
-    $sql = "INSERT INTO `combo` (`id`, `descricao`, `valor`) 
-    VALUES (NULL, '$descricao', '$valor')";
+    $sql = "INSERT INTO `combo` (`id`, `produto1`, `produto2`, `produto3`, `produto4`,`valor`) 
+    VALUES (NULL, '$produto1','$produto2','$produto3','$produto4', '$valor')";
     mysqli_set_charset($connect, 'utf8');
 
     if (mysqli_query($connect, $sql)) :

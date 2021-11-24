@@ -4,7 +4,13 @@ include_once 'includes/mensagem.php';
 include_once 'php_action/db_connect.php';
 //Incluindo o cabeçalho
 include_once 'includes/header.php';
+
 ?>
+<br>
+<br>
+<br>
+<br>
+
 
 
 <div class="container mt-5">
@@ -25,10 +31,13 @@ include_once 'includes/header.php';
     <tbody>
       <!--Exibindo dados do banco de dados-->
       <?php
-      $sql = "SELECT * FROM doacao";
-      $resultado = mysqli_query($connect, $sql);
-      //Verificando se a lista contem valores antes de começar o looping
-      if (mysqli_num_rows($resultado) > 0) :
+     if(isset($_GET['id'])):
+      $id=mysqli_escape_string($connect, $_GET['id']);
+      $sql = "SELECT * FROM ongs WHERE id = '$id'";
+      $resultado = mysqli_query($connect,$sql);
+      $dados = mysqli_fetch_array($resultado);
+     
+     
 
         while ($dados = mysqli_fetch_array($resultado)) :
 

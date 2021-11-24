@@ -18,9 +18,12 @@ include_once 'includes/header.php';
 
     <thead>
       <tr>
-        <th scope="col">Descrição</th>
+        <th scope="col">Descrição dos Produtos</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         <th scope="col">Custo</th>
-       
+
 
 
       </tr>
@@ -37,9 +40,13 @@ include_once 'includes/header.php';
 
       ?>
           <tr>
-            <td><?php echo $dados['descricao']; ?></td>
+            <td><?php echo $dados['produto1']; ?></td>
+            <td><?php echo $dados['produto2']; ?></td>
+            <td><?php echo $dados['produto3']; ?></td>
+            <td><?php echo $dados['produto4']; ?></td>
+
             <td><?php echo $dados['valor']; ?></td>
-            
+
             <!--Botão editar-->
             <td><a href="editarCombo.php?id=<?php echo $dados['id']; ?>" class="btn btn-success">
                 <i class="bi bi-pencil-fill"></i></a></td>

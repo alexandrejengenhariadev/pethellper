@@ -56,6 +56,9 @@ include_once 'includes/header.php';
             <!--Botão delete-->
             <td><a href="modal<?php echo $dados['id']; ?>" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal<?php echo $dados['id']; ?>">
                 <i class="bi bi-trash-fill"></i></a></td>
+            <!--Botão doações-->
+            <td><a href="listaDoacao.php?id=<?php echo $dados['id']; ?>" class="btn btn-success">
+            <i class="bi bi-bag-check"></i></a></td>
 
 
           </tr>
@@ -95,4 +98,3 @@ include_once 'includes/header.php';
     <a href="adicionar.php" class="btn btn-primary">Adicionar Cadastro</a>
     <a href="suprimentosAdm.php" class="btn btn-danger">Suprimentos</a>
   </div>
- 

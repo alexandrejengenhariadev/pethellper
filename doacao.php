@@ -84,6 +84,9 @@ endif;
           </form>
         </div>
       </div>
+      <?php
+      
+      ?>
     </div>
     <!--COMBO 2-->
     <div class="col">

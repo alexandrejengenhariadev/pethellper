@@ -10,10 +10,10 @@ if (isset($_POST['btn-deletar'])):
 
     if(mysqli_query($connect, $sql)):
         $_SESSION['mensagem'] = 'Deletado com sucesso!';
-        header('Location: ../index.php');
+        header('Location: ../ongAdm.php');
     else:
         $_SESSION['mensagem'] = 'Erro ao Deletar!';
-        header('Location: ../index.php');
+        header('Location: ../ongAdm.php');
     endif;
    
   

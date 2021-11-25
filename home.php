@@ -47,6 +47,7 @@ $resultado = mysqli_query($connect, $sql);
 
                             <form action="doacao.php" method="POST">
                                 <input type="hidden" name="nome" value="<?php echo $dados['nome']; ?>">
+                                <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
                                 <button type="submit" name="btn-doar" class="btn btn-danger">DOAR</button>
 
                             </form>

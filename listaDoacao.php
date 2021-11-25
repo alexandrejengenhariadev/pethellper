@@ -21,23 +21,24 @@ include_once 'includes/header.php';
     <thead>
       <tr>
         <th scope="col">Ong</th>
-        <th scope="col">Doação</th>
+        <th scope="col">Combo</th>
         <th scope="col">Valor</th>
         <th scope="col">Codigo</th>
-       
+        <th scope="col">Id Ong</th>
+
 
       </tr>
     </thead>
     <tbody>
       <!--Exibindo dados do banco de dados-->
       <?php
-     if(isset($_GET['id'])):
-      $id=mysqli_escape_string($connect, $_GET['id']);
-      $sql = "SELECT * FROM ongs WHERE id = '$id'";
-      $resultado = mysqli_query($connect,$sql);
-      $dados = mysqli_fetch_array($resultado);
-     
-     
+      if (isset($_GET['id'])) :
+        $id = mysqli_escape_string($connect, $_GET['id']);
+        $sql = "SELECT * FROM doacao WHERE idong = '$id'";
+        $resultado = mysqli_query($connect, $sql);
+        $dados = mysqli_fetch_array($resultado);
+
+
 
         while ($dados = mysqli_fetch_array($resultado)) :
 
@@ -47,16 +48,23 @@ include_once 'includes/header.php';
             <td><?php echo $dados['combo']; ?></td>
             <td><?php echo $dados['valor']; ?></td>
             <td><?php echo $dados['codigodoacao']; ?></td>
-           
-      
+            <td><?php echo $dados['idong']; ?></td>
+            <td> <input type="checkbox" name="ckdoacao[]" value="<?php echo $dados['idong']; ?>"></td>
+
+
+
           </tr>
 
 
-       
+
       <?php
         endwhile;
       endif;
       ?>
     </tbody>
   </table>
- 
+  <form action="php_action/baixa.php" method="POST">
+    <input type="submit" class="btn btn-primary" name="btnSubmit" value="Dar Baixa">
+    
+
+  </form>

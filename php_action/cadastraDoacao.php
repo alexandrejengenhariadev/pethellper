@@ -2,7 +2,7 @@
 //Header
 
 
-session_start();
+
 require_once 'db_connect.php';
 include_once '../includes/mensagem.php';
 ?>
@@ -14,15 +14,15 @@ include_once '../includes/mensagem.php';
 
 if (isset($_POST['btn-doar'])) :
    
-
+    $idong = mysqli_escape_string($connect, $_POST['idong']);
     $nome = mysqli_escape_string($connect, $_POST['nome']);    
     $combo = mysqli_escape_string($connect, $_POST['id']);
     $valor = mysqli_escape_string($connect, $_POST['valor']);
     $codigoDoacao = uniqid();
    
    
-    $sql = "INSERT INTO `doacao` (`id`, `ong`, `combo`, `valor`, `codigodoacao`) 
-    VALUES (NULL,'$nome','$combo', '$valor','$codigoDoacao' )";
+    $sql = "INSERT INTO `doacao` (`id`, `ong`, `combo`, `valor`, `codigodoacao`,`idong`) 
+    VALUES (NULL,'$nome','$combo', '$valor','$codigoDoacao','$idong' )";
     mysqli_set_charset($connect, 'utf8');
 
     if (mysqli_query($connect, $sql)) :
@@ -45,7 +45,7 @@ include_once 'includes/header.php';
     <a href="comboAdm.php" class="btn btn-primary">Listar Ongs </a>
 
 
-    </form>
+  
 
 </div>
 <?php

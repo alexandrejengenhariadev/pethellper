@@ -5,6 +5,7 @@ include_once '../public_html/includes/header.php';
 if (isset($_POST['btn-doar'])) :
 
   $nome = mysqli_escape_string($connect, $_POST['nome']);
+  $idong = mysqli_escape_string($connect, $_POST['id']);
 endif;
 $sql = "SELECT * FROM combo";
 $resultado = mysqli_query($connect, $sql);
@@ -74,6 +75,7 @@ endif;
           </ul>
           <form action="php_action/cadastraDoacao.php" method="POST">
             <input type="hidden" name="nome" value="<?php echo $nome; ?>">
+            <input type="hidden" name="idong" value="<?php echo $idong; ?>">
             <input type="hidden" name="id" value="<?php echo $id[0]; ?>">
             <input type="hidden" name="valor" value="<?php echo $valor[0]; ?>">
 
@@ -107,6 +109,7 @@ endif;
           </ul>
           <form action="php_action/cadastraDoacao.php" method="POST">
             <input type="hidden" name="nome" value="<?php echo $nome; ?>">
+            <input type="hidden" name="idong" value="<?php echo $idong; ?>">
             <input type="hidden" name="id" value="<?php echo $id[1]; ?>">
             <input type="hidden" name="valor" value="<?php echo $valor[1]; ?>">
 
@@ -137,6 +140,7 @@ endif;
           </ul>
           <form action="php_action/cadastraDoacao.php" method="POST">
             <input type="hidden" name="nome" value="<?php echo $nome; ?>">
+            <input type="hidden" name="idong" value="<?php echo $idong; ?>">
             <input type="hidden" name="id" value="<?php echo $id[2]; ?>">
             <input type="hidden" name="valor" value="<?php echo $valor[2]; ?>">
 

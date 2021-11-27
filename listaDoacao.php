@@ -15,7 +15,7 @@ include_once 'includes/header.php';
 
 <div class="container mt-5">
   <h1>Novo Cadastro</h1>
-
+  <form action="php_action/baixa.php" method="POST">
   <table class="table">
 
     <thead>
@@ -49,7 +49,9 @@ include_once 'includes/header.php';
             <td><?php echo $dados['valor']; ?></td>
             <td><?php echo $dados['codigodoacao']; ?></td>
             <td><?php echo $dados['idong']; ?></td>
-            <td> <input type="checkbox" name="ckdoacao[]" value="<?php echo $dados['idong']; ?>"></td>
+            <td> <label>
+                <input type="checkbox" name="ckDoacao[]" value="<?php echo $dados['codigodoacao'];?>"><?php echo $dados['codigodoacao'];?>
+              </label></td>
 
 
 
@@ -63,8 +65,8 @@ include_once 'includes/header.php';
       ?>
     </tbody>
   </table>
-  <form action="php_action/baixa.php" method="POST">
-    <input type="submit" class="btn btn-primary" name="btnSubmit" value="Dar Baixa">
-    
+ 
+    <input type="submit" name="btnSubmit" value="Enviar">
+
 
   </form>
